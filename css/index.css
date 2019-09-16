@@ -71,23 +71,41 @@ p {
 .container {
     width: 800px;
     margin: 0 auto;
+    animation: pulse 5s ;
+}
+
+@keyframes pulse {
+  0% {
+    background-color:purple;
+  }
+  100% {
+    background-color: white;
+  }
 }
 .container header .headerclass {
     display:flex;
     
-    margin-top:20px;
-    margin-bottom:30px;
 }
+
+
+header .headerclass nav{
+  
+   margin-top: 3.0%;
+   display: flex;
+   justify-content: space-between;
+    margin-left:5%;
+}
+
 header .headerclass nav a{
-    	
-	margin: 0 30px;
-    color:black;
-    margin-top:15px;
-    
+    display: inline-block;	
+	margin-left:10%;
+    color:black;  
+
+  
 }
 header .headerclass nav a:link{
     text-decoration:none;
-   
+    
 }
 
 .top-content {
@@ -206,20 +224,20 @@ footer nav a {
 .container header{
     display:flex;
 }
-.about-header {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
-}
+
 header{
      margin-top:30px;
      margin-bottom:30px;
+}
+header nav{
+    
+    margin-top: 3%;
 }
 header  nav a{
     	
 	margin: 0 30px;
     color:black;
-    
+   
     
 }
 header  nav a:link{
@@ -232,12 +250,31 @@ header  nav a:link{
 .about-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2%;
     
 }
 
 .aboutheader{
     margin-top:30px;
     border-bottom: 1px dashed black;
+    
+}
+.aboutheader p{
+    margin-bottom:2%;
+    animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .about-block {
@@ -260,6 +297,5 @@ header  nav a:link{
 }
 
 .about-footer {
-    padding: 100px;
-    margin: 20px 0px;
+  margin-bottom:5%;
 }
